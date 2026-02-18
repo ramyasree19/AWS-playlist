@@ -1,0 +1,28 @@
+I began revising cloud fundamentals, starting with one of the most important networking concepts in AWS — Amazon VPC (Virtual Private Cloud). I would to like to share the basics and actual work behind the scenes in AWS
+
+what is VPC?
+Isolate resources from other resources in the cloud
+- Specific to single region
+- Isolated
+- Network bounded
+- Explicitly allow to communicate with other resources
+
+VPC gives you full control over:
+- CIDR Block (range of IP addresses)
+- Subnetting ( groups of IP address)
+- Routing ( route tables)
+- Firewalls ( NACLs, Security Groups)
+- Gateways ( IGW, NAT)
+
+2 Types of VPCs
+Default VPC & Custom VPC(fully controlled)
+
+Let’s explore the concept of the Default VPC and how a VPC actually works
+- 1 Default VPC per region
+- In general, CIDR block must be in between /16 to /28
+- /16 IPv4 CIDR block, it is always 172.31.0.0/16 i.e ~65k ip addresses
+- /20 Default subnet in each availability Zone
+- IGW attached to VPC
+- Default route to IGW in routing table which is attached/ associated to subnet
+- On top this we use Security Groups to secure resources
+- Default NACLs, secure subnets and VPC overall
