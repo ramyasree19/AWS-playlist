@@ -46,3 +46,5 @@ A VPC allows you to:
 - ✅ **Default NACLs** to secure subnets and VPC overall
 
 ---
+![alt text](image.png)
+![alt text](image-1.png)
