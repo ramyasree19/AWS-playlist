@@ -9,6 +9,7 @@ If an EC2 instance:
 - Stops
 - Is terminated
 - Or is replaced
+
 👉 It gets a new public IP address.
 That means:
 - Your application endpoint changes
@@ -29,18 +30,24 @@ It comes from Amazon’s public IPv4 pool (or you can even bring your own IP ran
 Now even if:
 The instance stops
 The server is replaced
+
 👉 You can re-associate the same Elastic IP
+
 👉 No change from the user’s perspective
+
 Problem solved ✅
 
 𝗕𝗶𝗴 𝗔𝗱𝘃𝗮𝗻𝘁𝗮𝗴𝗲
 Let’s say your server goes down for maintenance.
 Instead of informing users about a new instance & new IP:
+
 👉 Launch a new instance for your application.
+
 👉 Associate the same Elastic IP to the new instance.
 Traffic automatically redirects.
 
 𝗣𝗿𝗶𝗰𝗶𝗻𝗴 𝗕𝗿𝗲𝗮𝗸𝗱𝗼𝘄𝗻
+
 💰 If Elastic IP is associated with a running instance → No extra charge
 💰 If you attach multiple Elastic IPs to the same instance → Additional charges per IP/hour
 💰 If Elastic IP is allocated but NOT associated with any instance → Small hourly charge applies

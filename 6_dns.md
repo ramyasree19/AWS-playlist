@@ -8,10 +8,13 @@ Inside an Amazon VPC:
 👉 something like: private-ip.ec2.internal
 
 𝗛𝗼𝘄 𝗱𝗼𝗲𝘀 𝗗𝗡𝗦 𝘄𝗼𝗿𝗸 𝗶𝗻 𝗮 𝗩𝗣𝗖?
+
 AWS provides a built-in DNS server that we can use.
 You can send DNS queries to:
+
 1️⃣ 169 .254 .169 .253 (AWS-provided DNS server)
  OR
+
 2️⃣ The second usable IP of your VPC CIDR block
  👉 Example: if VPC CIDR is x.x.x.0/16, DNS server will be x.x.x.2
 You can verify this inside your EC2 instance:
@@ -19,10 +22,13 @@ cat /etc/resolv.conf. => You’ll see the DNS server pointing to the VPC’s sec
 
 𝗜𝗺𝗽𝗼𝗿𝘁𝗮𝗻𝘁 𝗗𝗡𝗦 𝗦𝗲𝘁𝘁𝗶𝗻𝗴𝘀 𝗶𝗻 𝗩𝗣𝗖
 There are two main options:
+
 1️⃣ DNS Resolution
 - Must be enabled
 - Allows instances to resolve domain names
+
 ⚠️ Without enabling this, instances cannot properly resolve DNS names.
+
 2️⃣ DNS Hostnames
 - Needed if you want public DNS names for instances with public IPs
 - By default, private DNS is assigned
